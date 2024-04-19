@@ -8,10 +8,11 @@ $estado= $_POST['estado'];
 
 if(!empty($nombre) || !empty($password) || !empty($email) || !empty($telefono) || !empty($genero) || !empty($estado)){
     
-    $host = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "usuariosuno";
+    $host = "bqhj3xvf9exii2ciawuu-mysql.services.clever-cloud.com";
+    $dbusername = "unm8tt3u8aggqmkm";
+    $dbpassword = "DrdU5mrmfbPyKWn2Oycn";
+    $dbname = "bqhj3xvf9exii2ciawuu";
+    
 
 
     $conn = new mysqli($host,$dbusername, $dbpassword, $dbname);
