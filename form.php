@@ -45,9 +45,14 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Género</th><th>Estado</th></tr>";
+    echo "<tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Género</th><th>Estado</th><th>Acciones</th></tr>";
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["nombre"] . "</td><td>" . $row["email"] . "</td><td>" . $row["telefono"] . "</td><td>" . $row["genero"] . "</td><td>" . $row["estado"] . "</td></tr>";
+        echo "<tr><td>" . $row["nombre"] . "</td><td>" . $row["email"] . "</td><td>" . $row["telefono"] . "</td><td>" . $row["genero"] . "</td><td>" . $row["estado"] . "</td><td>
+        <form action='form.php' method='post'>
+            <input type='hidden' name='id' value='" . $row["id"] . "'>
+            <input type='submit' value='Actualizar' name='actualizar'>
+            <input type='submit' value='Eliminar' name='eliminar'>
+        </form></td></tr>";
     }
     echo "</table>";
 } else {
