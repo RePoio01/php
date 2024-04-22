@@ -1,14 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
 }
 
 body {
-    background:#D9753B;
+    background: #D9753B;
     color: #F2A057;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .formulario {
@@ -22,70 +20,27 @@ body {
     transform: translate(-50%, -50%);
 }
 
-input[type="text"]{
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+select[class="selector"] {
     width: 100%;
     background: #D9753B;
     border: 1px solid #592316;
     border-radius: 3px;
     padding: 6px 15px;
     box-sizing: border-box;
-    margin-bottom: 20%;
+    margin-bottom: 20px; /* Modificado */
     color: #592316;
 }
 
-input[type="password"]{
-    width: 100%;
-    background: #D9753B;
-    border: 1px solid #592316;
-    border-radius: 3px;
-    padding: 6px 15px;
-    box-sizing: border-box;
-    margin-bottom: 20%;
-    color: #592316;
-}
-
-input [type = "radio"]{
-    padding: 6px 15 px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-
-}
-
-input[type="email"]{
-    width: 100%;
-    background: #D9753B;
-    border: 1px solid #592316;
-    border-radius: 3px;
-    padding: 6px 15px;
-    box-sizing: border-box;
-    margin-bottom: 20%;
-    color: #592316;
-}
-input[type="phone"]{
-    width: 100%;
-    background: #D9753B;
-    border: 1px solid #592316;
-    border-radius: 3px;
-    padding: 6px 15px;
-    box-sizing: border-box;
-    margin-bottom: 20%;
-    color: #592316;
-}
-
-select[class = "selector"]{
-    width: 100%;
-    background: #D9753B;
-    border: 1px solid #592316;
-    border-radius: 3px;
-    padding: 6px 15px;
-    box-sizing: border-box;
-    margin-bottom: 20%;
-    color: #592316;
-}
-
-input[type="submit"]{
+input[type="submit"],
+input[type="submit"][name="enviar"],
+input[type="submit"][name="actualizar"],
+input[type="submit"][name="eliminar"] {
     background: goldenrod;
-    width: 100%;
+    width: calc(100% / 3 - 10px); /* Dividir el ancho en 3 y restar el espacio entre los botones */
     border-radius: 3px;
     padding: 8px 15px;
     box-sizing: border-box;
@@ -93,9 +48,13 @@ input[type="submit"]{
     cursor: pointer;
     color: #592316;
     font-size: 20px;
+    margin-right: 10px; /* Espacio entre los botones */
 }
 
-input[type = "submit"]:hover{
+input[type="submit"]:hover,
+input[type="submit"][name="enviar"]:hover,
+input[type="submit"][name="actualizar"]:hover,
+input[type="submit"][name="eliminar"]:hover {
     background: #D9753B;
     transition: .6s;
 }
